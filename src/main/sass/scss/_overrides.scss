@@ -10,8 +10,9 @@
 }
 
 .page .header .h1 {
-	padding: 0;
 	margin: 0;
+	font-size: 36px;
+	font-weight: bold;
 }
 .page .header .mainMenu {
 	left: 500px;
@@ -27,6 +28,7 @@
 
 #zoekContainer label {
 	display: inline;
+	margin-left: 3em;
 }
 
 #footerWrapper {
