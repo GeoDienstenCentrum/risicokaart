@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* compass css mixins. */
+@import 'compass/css3';
+
+/* lokale imports en overrides. */
+@import 'colours';
+@import 'overrides';
+
+$ControlBorder: 1px solid $ControlBorderColour;
+/**
+ * dropdown nokmenu menu vars.
+ */ 
+$magicOffscreenMargin: 32767px;
+$magicPadding: 5px;
+$_magicMenuHeigth: 1.563em;
+$_magicMenuWidth: 15em;
+
+.nokmenu {
+	z-index: 1005;
+	position: absolute;
+	left: 1px;
+	top: 160px;
+	padding-right: $magicPadding;
+	background-color: $BlueColour;
+	background-color: $BlueColourTransp;
+	color: #fff;
+	border: $ControlBorder;
+	min-width: $_magicMenuWidth;
+	@include border-right-radius(3px);
+}
+
+@media print {
+	.nokmenu {
+		display: none;
+	}
+}
+
+#downloadLink a {
+	background: transparent url(../img/opendata.png) 0px 1px no-repeat;
+	padding-left: 18px;
+}
+
+.metadata {
+	background: transparent url(../img/metadata.png) 0px 1px no-repeat;
+	padding-left: 18px;
+}
+
+.moreinfo {
+	background: transparent url(../img/moreinfo.png) 0px 1px no-repeat;
+	padding-left: 18px;
+}
+
+.extern {
+	
+}
+
+.kaartkeuze_wrapper {
+	position: relative;
+	height: $_magicMenuHeigth;
+}
+
+.nav,
+.nav ul {
+	/* reset default list style */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav {
+	/* you could remove this and clear the float differently, 
+		but to me this makes the most sense */
+	height: $_magicMenuHeigth;
+}
+
+.nav a.main {
+	/* so that the top link persistent background works */
+	background: transparent;
+	/* needs to be the same as the persistent background trick and 
+		so that the sublevels are properly aligned */
+	height: $_magicMenuHeigth;
+	/* not really necessary, but in this specific case it 
+		vertically centers the main link text */
+	line-height: $_magicMenuHeigth;
+	/* making it more bulletproof*/
+	overflow: hidden;
+	/* remove the padding that was applied above */
+	padding: 0;
+}
+
+.main.switchlayer:hover, 
+.main.switchlayer:focus {
+	background-color: $BlueColour;
+}
+
+.nav ul {
+	/* persistent background trick */
+	padding-top: $_magicMenuHeigth;
+	margin-top: -$_magicMenuHeigth;
+}
+
+.nav ul ul {
+	/* so that it can be moved top/left */
+	position: relative;
+	/* this is the sole reason why the main links must have a fixed height */
+	top: -$_magicMenuHeigth;
+}
+
+
+.nav .link,
+.nav a {
+	/*same as width*/
+	width: $_magicMenuWidth; 
+	color: #FFFFFF;
+}
+
+.nav ul li {
+	/* force ie8 to float-drop */
+	max-width: $_magicMenuWidth;
+}
+
+.nav ul ul {
+	/* move the sublinks to the side, so they dont overlap */
+	left: $_magicMenuWidth;
+}
+
+.nav a {
+	/* apply padding to links, to vertically center them, 
+	be careful with horizontal padding in IE5, 
+	correct width must be maintained */
+	/* makes the links very thin, so that the sublinks can hide inside the main link */
+	margin-right: -($_magicMenuWidth - 0.063em);
+}
+
+.nav li {
+	/* fixes several IE related bugs, and allows for clearing */
+	float: left;
+}
+
+.nav ul {
+	/* necessary for float drop */
+	float: left;
+}
+
+.nav ul li {
+	/* must clear the floated list item inside sublist */
+	clear: left;
+}
+
+.nav a {
+	/* needs to have a position, to be above the rest */
+	position: relative;
+	display: block;
+}
+
+.nav a.main {
+	/* necessary for float drop */
+	float: left;
+	/*bring the links back into view*/
+	margin-top: $magicOffscreenMargin;
+}
+
+.nav .link,
+.nav .sub {
+	/* hide the links and their containers, 
+		opera has low upper limits */
+	margin-top: -$magicOffscreenMargin;
+}
+
+.nav ul {
+	/* avoid any interaction between the sub's, 
+		can be any large size */
+	margin-bottom: -$magicOffscreenMargin;
+}
+
+/* the main trick, removes the negative right-margin and causes float drop */
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
+	margin-right: 0;
+	background-color: $BlueColour;
+}
+
+.nav ul:hover,
+.nav ul ul:hover {
+	/* OPERA fix: for opera sublinks flickering on :hover */
+	clear: left;
+}
+
+/* background no longer needed */
+.nav ul ul {
+	background: transparent;
+}
+
+.nav .sub {
+	width: 100%;
+}
+
+.nav ul a.main,
+.sub ul a {
+	background-color: $BlueColour;
+	background-color: $BlueColourTransp;
+}

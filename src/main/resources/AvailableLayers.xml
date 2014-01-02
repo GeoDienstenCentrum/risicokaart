@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Layers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd ">
+	<Layerdescriptor>
+		<id>risicocontouren</id>
+		<name>risicocontouren</name>
+		<layers>risico_inrichting_10-6, risico_installatie_10-6, trnsp_ctr_6</layers>
+		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
+		<styles>default, default, default</styles>
+		<attributes>*</attributes>
+		<!--
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|87012b95-6e1a-4835-abbf-4f6271b56568</metadata>
+		<moreinfo>http://www.ipo.nl/publicaties/rapport-natuurmeting-op-kaart-beschikbaar</moreinfo>
+		-->
+	</Layerdescriptor>
+</Layers>
