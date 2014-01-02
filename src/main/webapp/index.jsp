@@ -78,7 +78,7 @@
 	<div class="page">
 		<div class="header">
 			<h1 class="h1">
-				Risicokaart
+				<fmt:message key="KEY_PAG_TITEL" />
 			</h1>
 			<div class="mainMenu">
 				<ul>

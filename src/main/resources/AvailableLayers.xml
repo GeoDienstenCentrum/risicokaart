@@ -3,14 +3,16 @@
 	xmlns="http://xml.util.cbsviewer.mineleni.nl" xsi:schemaLocation="http://xml.util.cbsviewer.mineleni.nl AvailableLayers.xsd ">
 	<Layerdescriptor>
 		<id>risicocontouren</id>
-		<name>risicocontouren</name>
+		<name>risico contouren</name>
 		<layers>risico_inrichting_10-6,risico_installatie_10-6,trnsp_ctr_6</layers>
 		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
 		<styles>default,default,default</styles>
-		<attributes>*</attributes>
+		<attributes>NAAMINRICHTING,NAAM_INSTALLATIE,SOORT_INSTALLATIE,RISICOCONTOUR_AFSTAND</attributes>
+		<aliases>Naam,Installatie,Soort,risico afstand</aliases>
 		<!--
 		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|87012b95-6e1a-4835-abbf-4f6271b56568</metadata>
 		<moreinfo>http://www.ipo.nl/publicaties/rapport-natuurmeting-op-kaart-beschikbaar</moreinfo>
 		-->
+		<zoom>7</zoom>
 	</Layerdescriptor>
 </Layers>
