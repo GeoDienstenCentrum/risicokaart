@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/GeoDienstenCentrum/risicokaart.png?label=ready)](https://waffle.io/GeoDienstenCentrum/risicokaart)  
 risicokaart
 ===========
 
