@@ -11,3 +11,6 @@ Deze applicatie is gebouwd met [CBSviewer](https://github.com/MinELenI/CBSviewer
 Een live (beta) preview is tijdelijk beschikbaar op een [demonstratie server](http://gisdemo.agro.nl/risicokaart/) om te laten zien hoe het beter kan.
 
 ![logo](http://staff.washington.edu/tft/a11ylogo/images/a11ylogo150.png)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/GeoDienstenCentrum/risicokaart/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
