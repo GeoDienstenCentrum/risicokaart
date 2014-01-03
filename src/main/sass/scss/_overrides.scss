@@ -35,3 +35,35 @@
 	width: 500px;
 	@include border-right-radius(3px);
 }
+
+#featureinfo {
+	max-height: 200px;
+}
+
+.settingsContent {
+	overflow-x: initial;
+	overflow-y: initial;
+}
+
+.hasTooltip {
+	&:hover span,
+	&:focus span {
+		clip: auto;
+		padding: 2px;
+		border: 1px solid $ControlBorderColour;
+		height: auto;
+		width: auto;
+		bottom: 3em;
+		right: 0px;
+		z-index: 1160;
+		max-height: 100px;
+		white-space: nowrap;
+		display: inline-block;
+		background-color: #fff;
+		color: #000;
+		@include border-radius(3px);
+		@include box-shadow(2px 2px 2px $ControlBorderColour);
+		font-size: 12px;
+		font-weight: normal;
+	}
+}

@@ -1,4 +1,4 @@
-risicokaart documentation
+risicokaart documentatie
 =========
 
 __Maven generated documentation site, edits to these files will be lost.__
