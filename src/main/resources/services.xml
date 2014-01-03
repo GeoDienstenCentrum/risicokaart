@@ -1,0 +1,2013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM 'http://schemas.opengis.net/wms/1.1.1/WMS_MS_Capabilities.dtd' 
+[
+<!ELEMENT VendorSpecificCapabilities EMPTY>
+]><WMT_MS_Capabilities updateSequence="1.1.0" version="1.1.1">
+	<Service>
+		<Name>OGC:WMS</Name>
+		<Title>WMS publieke risicokaart</Title>
+		<Abstract/>
+		<KeywordList>
+			<Keyword>deegree</Keyword>
+			<Keyword>wms</Keyword>
+			<Keyword>risicokaart</Keyword>
+		</KeywordList>
+		<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?" xlink:type="simple"/>
+		<ContactInformation>
+			<ContactPersonPrimary>
+				<ContactPerson>Lbo risicokaart</ContactPerson>
+				<ContactOrganization>Landelijke Beheer Organisatie Risicokaart</ContactOrganization>
+			</ContactPersonPrimary>
+			<ContactPosition>Beheerder landelijke risicokaart</ContactPosition>
+			<ContactAddress>
+				<AddressType>postal</AddressType>
+				<Address>Postbus 16107</Address>
+				<City>Den Haag</City>
+				<StateOrProvince>Zuid-Holland</StateOrProvince>
+				<PostCode>2500 BC</PostCode>
+				<Country>Nederland</Country>
+			</ContactAddress>
+			<ContactVoiceTelephone>0031708881219</ContactVoiceTelephone>
+			<ContactFacsimileTelephone>0031708881219</ContactFacsimileTelephone>
+			<ContactElectronicMailAddress>lbo@risicokaart.nl</ContactElectronicMailAddress>
+		</ContactInformation>
+		<Fees>none</Fees>
+		<AccessConstraints>none</AccessConstraints>
+	</Service>
+	<Capability>
+		<Request>
+			<GetCapabilities>
+				<Format>application/vnd.ogc.wms_xml</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?" xlink:type="simple"/>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetCapabilities>
+			<GetMap>
+				<Format>image/png</Format>
+				<Format>image/jpg</Format>
+				<Format>image/tif</Format>
+				<Format>image/bmp</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?" xlink:type="simple"/>
+						</Get>
+						<Post>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?" xlink:type="simple"/>
+						</Post>
+					</HTTP>
+				</DCPType>
+			</GetMap>
+			<GetFeatureInfo>
+				<Format>application/vnd.ogc.gml</Format>
+				<Format>text/plain</Format>
+				<Format>text/html</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?" xlink:type="simple"/>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetFeatureInfo>
+			<GetLegendGraphic>
+				<Format>image/png</Format>
+				<Format>image/jpeg</Format>
+				<Format>image/jpg</Format>
+				<Format>image/tif</Format>
+				<Format>image/bmp</Format>
+				<DCPType>
+					<HTTP>
+						<Get>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?" xlink:type="simple"/>
+						</Get>
+					</HTTP>
+				</DCPType>
+			</GetLegendGraphic>
+		</Request>
+		<Exception>
+			<Format>application/vnd.ogc.se_xml</Format>
+			<Format>application/vnd.ogc.se_inimage</Format>
+			<Format>application/vnd.ogc.se_blank</Format>
+		</Exception>
+		<UserDefinedSymbolization RemoteWFS="1" SupportSLD="1" UserLayer="1" UserStyle="1"/>
+		<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+			<Name>Risicokaart</Name>
+			<Title>Publieke risicokaart</Title>
+			<Abstract>Publieke risicokaart</Abstract>
+			<KeywordList>
+				<Keyword>WMS</Keyword>
+				<Keyword>Risicokaart</Keyword>
+			</KeywordList>
+			<SRS>EPSG:28992</SRS>
+			<SRS>EPSG:25832</SRS>
+			<SRS>EPSG:31466</SRS>
+			<SRS>EPSG:31467</SRS>
+			<SRS>EPSG:4326</SRS>
+			<SRS>EPSG:900913</SRS>
+			<SRS>EPSG:3857</SRS>
+			<SRS>EPSG:3035</SRS>
+			<SRS> EPSG:3034</SRS>
+			<SRS>EPSG:4936</SRS>
+			<SRS>EPSG:4258</SRS>
+			<SRS>EPSG:4937</SRS>
+			<SRS>EPSG:3043</SRS>
+			<SRS>EPSG:3044</SRS>
+			<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+			<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+			<ScaleHint max="1.0E8" min="0.0"/>
+			<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+				<Name>veiligheidsafstanden</Name>
+				<Title>Veiligheidsafstanden</Title>
+				<SRS>EPSG:28992</SRS>
+				<SRS>EPSG:25832</SRS>
+				<SRS>EPSG:31466</SRS>
+				<SRS>EPSG:31467</SRS>
+				<SRS>EPSG:4326</SRS>
+				<SRS>EPSG:900913</SRS>
+				<SRS>EPSG:3857</SRS>
+				<SRS>EPSG:3035</SRS>
+				<SRS> EPSG:3034</SRS>
+				<SRS>EPSG:4936</SRS>
+				<SRS>EPSG:4258</SRS>
+				<SRS>EPSG:4937</SRS>
+				<SRS>EPSG:3043</SRS>
+				<SRS>EPSG:3044</SRS>
+				<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+				<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+				<ScaleHint max="1.0E8" min="0.0"/>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>risicocontouren</Name>
+					<Title>Risicocontouren</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>risicocontouren_inirichting</Name>
+						<Title>Inrichting</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<ScaleHint max="1.0E8" min="0.0"/>
+						<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+							<Name>risico_inrichting_10-6</Name>
+							<Title>Contour 6</Title>
+							<SRS>EPSG:28992</SRS>
+							<SRS>EPSG:25832</SRS>
+							<SRS>EPSG:31466</SRS>
+							<SRS>EPSG:31467</SRS>
+							<SRS>EPSG:4326</SRS>
+							<SRS>EPSG:900913</SRS>
+							<SRS>EPSG:3857</SRS>
+							<SRS>EPSG:3035</SRS>
+							<SRS> EPSG:3034</SRS>
+							<SRS>EPSG:4936</SRS>
+							<SRS>EPSG:4258</SRS>
+							<SRS>EPSG:4937</SRS>
+							<SRS>EPSG:3043</SRS>
+							<SRS>EPSG:3044</SRS>
+							<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+							<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+							<Style>
+								<Name>default</Name>
+								<Title>risico_inrichting_10-6 (default)</Title>
+								<LegendURL height="10" width="10">
+									<Format>image/jpeg</Format>
+									<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=risico_inrichting_10-6&amp;style=default:risico_inrichting_10-6" xlink:type="simple"/>
+								</LegendURL>
+							</Style>
+							<ScaleHint max="49.49747" min="0.0"/>
+						</Layer>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>risicocontouren_installaties</Name>
+						<Title>Installaties</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<ScaleHint max="1.0E8" min="0.0"/>
+						<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+							<Name>risico_installatie_10-6</Name>
+							<Title>Contour 6</Title>
+							<SRS>EPSG:28992</SRS>
+							<SRS>EPSG:25832</SRS>
+							<SRS>EPSG:31466</SRS>
+							<SRS>EPSG:31467</SRS>
+							<SRS>EPSG:4326</SRS>
+							<SRS>EPSG:900913</SRS>
+							<SRS>EPSG:3857</SRS>
+							<SRS>EPSG:3035</SRS>
+							<SRS> EPSG:3034</SRS>
+							<SRS>EPSG:4936</SRS>
+							<SRS>EPSG:4258</SRS>
+							<SRS>EPSG:4937</SRS>
+							<SRS>EPSG:3043</SRS>
+							<SRS>EPSG:3044</SRS>
+							<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+							<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+							<Style>
+								<Name>default</Name>
+								<Title>risico_installatie_10-6 (default)</Title>
+								<LegendURL height="10" width="10">
+									<Format>image/jpeg</Format>
+									<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=risico_installatie_10-6&amp;style=default:risico_installatie_10-6" xlink:type="simple"/>
+								</LegendURL>
+							</Style>
+							<ScaleHint max="49.49747" min="0.0"/>
+						</Layer>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>risicocontouren_transport</Name>
+						<Title>Transport</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<ScaleHint max="1.0E8" min="0.0"/>
+						<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+							<Name>trnsp_ctr_6</Name>
+							<Title>Contour 6</Title>
+							<SRS>EPSG:28992</SRS>
+							<SRS>EPSG:25832</SRS>
+							<SRS>EPSG:31466</SRS>
+							<SRS>EPSG:31467</SRS>
+							<SRS>EPSG:4326</SRS>
+							<SRS>EPSG:900913</SRS>
+							<SRS>EPSG:3857</SRS>
+							<SRS>EPSG:3035</SRS>
+							<SRS> EPSG:3034</SRS>
+							<SRS>EPSG:4936</SRS>
+							<SRS>EPSG:4258</SRS>
+							<SRS>EPSG:4937</SRS>
+							<SRS>EPSG:3043</SRS>
+							<SRS>EPSG:3044</SRS>
+							<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+							<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+							<Style>
+								<Name>default</Name>
+								<Title>trnsp_ctr_6 (default)</Title>
+								<LegendURL height="10" width="10">
+									<Format>image/jpeg</Format>
+									<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=trnsp_ctr_6&amp;style=default:trnsp_ctr_6" xlink:type="simple"/>
+								</LegendURL>
+							</Style>
+							<ScaleHint max="49.49747" min="0.0"/>
+						</Layer>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>risicocontouren_vliegveld</Name>
+						<Title>Vliegveld</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<ScaleHint max="1.0E8" min="0.0"/>
+						<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+							<Name>vliegveldcontour6</Name>
+							<Title>Risicocontour vliegveld 10-6</Title>
+							<SRS>EPSG:28992</SRS>
+							<SRS>EPSG:25832</SRS>
+							<SRS>EPSG:31466</SRS>
+							<SRS>EPSG:31467</SRS>
+							<SRS>EPSG:4326</SRS>
+							<SRS>EPSG:900913</SRS>
+							<SRS>EPSG:3857</SRS>
+							<SRS>EPSG:3035</SRS>
+							<SRS> EPSG:3034</SRS>
+							<SRS>EPSG:4936</SRS>
+							<SRS>EPSG:4258</SRS>
+							<SRS>EPSG:4937</SRS>
+							<SRS>EPSG:3043</SRS>
+							<SRS>EPSG:3044</SRS>
+							<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+							<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+							<Style>
+								<Name>default</Name>
+								<Title>vliegveldcontour6 (default)</Title>
+								<LegendURL height="10" width="10">
+									<Format>image/jpeg</Format>
+									<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=vliegveldcontour6&amp;style=default:vliegveldcontour6" xlink:type="simple"/>
+								</LegendURL>
+							</Style>
+							<ScaleHint max="49.49747" min="0.0"/>
+						</Layer>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>evacuatie afstand kernenergie</Name>
+					<Title>Maatregelzone kernenergie</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>veiligheidsafst_kernenergie</Name>
+						<Title>Maatregelzone kernenergie</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>veiligheidsafst_kernenergie (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=veiligheidsafst_kernenergie&amp;style=default:veiligheidsafst_kernenergie" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>veiligheidsafstand</Name>
+					<Title>Veiligheidsafstand</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>veiligheidsafst_consument</Name>
+						<Title>Consumentenvuurwerk</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>veiligheidsafst_consument (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=veiligheidsafst_consument&amp;style=default:veiligheidsafst_consument" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="49.49747" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>veiligheidsafst_professioneel</Name>
+						<Title>Profesioneel vuurwerk</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>veiligheidsafst_professioneel (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=veiligheidsafst_professioneel&amp;style=default:veiligheidsafst_professioneel" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="49.49747" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>zone 1 vliegveld</Name>
+					<Title>Zone 1 vliegveld</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>vliegveldcontour</Name>
+						<Title>vliegveld zone1</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>vliegveldzone1 (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=vliegveldcontour&amp;style=default:vliegveldzone1" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="49.49747" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>zone defensie</Name>
+					<Title>Zone defensie</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>zone_defensie_a</Name>
+						<Title>Zone  A</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>zone_defensie_a (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=zone_defensie_a&amp;style=default:zone_defensie_a" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="49.49747" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>zone_defensie_b</Name>
+						<Title>Zone B</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>zone_defensie_b (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=zone_defensie_b&amp;style=default:zone_defensie_b" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="49.49747" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>zone_defensie_c</Name>
+						<Title>Zone C</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>zone_defensie_c (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=zone_defensie_c&amp;style=default:zone_defensie_c" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="49.49747" min="0.0"/>
+					</Layer>
+				</Layer>
+			</Layer>
+			<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+				<Name>ongevallen gevaarlijke stoffen</Name>
+				<Title>Ongevallen gevaarlijke stoffen</Title>
+				<SRS>EPSG:28992</SRS>
+				<SRS>EPSG:25832</SRS>
+				<SRS>EPSG:31466</SRS>
+				<SRS>EPSG:31467</SRS>
+				<SRS>EPSG:4326</SRS>
+				<SRS>EPSG:900913</SRS>
+				<SRS>EPSG:3857</SRS>
+				<SRS>EPSG:3035</SRS>
+				<SRS> EPSG:3034</SRS>
+				<SRS>EPSG:4936</SRS>
+				<SRS>EPSG:4258</SRS>
+				<SRS>EPSG:4937</SRS>
+				<SRS>EPSG:3043</SRS>
+				<SRS>EPSG:3044</SRS>
+				<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+				<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+				<ScaleHint max="1.0E8" min="0.0"/>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>ongevallen gevaarlijke stoffen inrichting</Name>
+					<Title>Inrichtingen</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_LPG</Name>
+						<Title>LPG</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_LPG (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_LPG&amp;style=default:p_LPG" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_opslag</Name>
+						<Title>Opslag</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_opslag (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_opslag&amp;style=default:p_opslag" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_ammoniak</Name>
+						<Title>Ammoniak</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_ammoniak (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_ammoniak&amp;style=default:p_ammoniak" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_emplacement</Name>
+						<Title>Emplacement</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_emplacement (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_emplacement&amp;style=default:p_emplacement" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_vervoer</Name>
+						<Title>Vervoer</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_vervoer (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_vervoer&amp;style=default:p_vervoer" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_vuurwerk</Name>
+						<Title>Vuurwerk</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_vuurwerk (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_vuurwerk&amp;style=default:p_vuurwerk" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_nucleair</Name>
+						<Title>Nucleair</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_nucleair (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_nucleair&amp;style=default:p_nucleair" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_ontplofbarestoffen</Name>
+						<Title>OntplofbareStoffen</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_ontplofbarestoffen (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_ontplofbarestoffen&amp;style=default:p_ontplofbarestoffen" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_defensie</Name>
+						<Title>Defensie</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_defensie (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_defensie&amp;style=default:p_defensie" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_overig</Name>
+						<Title>Overig</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_overig (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_overig&amp;style=default:p_overig" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>p_BRZO</Name>
+						<Title>BRZO</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>p_BRZO (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=p_BRZO&amp;style=default:p_BRZO" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>terreingrens</Name>
+						<Title>Terreingrens</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>terreingrens (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=terreingrens&amp;style=default:terreingrens" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="49.49747" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>ongevallen gevaarlijke stoffen transport</Name>
+					<Title>Transport</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>trns_wegen</Name>
+						<Title>Wegen</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>trns_wegen (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=trns_wegen&amp;style=default:trns_wegen" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>trns_spoorwegen</Name>
+						<Title>Spoorwegen</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>trns_spoorwegen (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=trns_spoorwegen&amp;style=default:trns_spoorwegen" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>trns_waterwegen</Name>
+						<Title>Waterwegen</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>trns_waterwegen (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=trns_waterwegen&amp;style=default:trns_waterwegen" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>trns_buisleidingen</Name>
+						<Title>Buisleidingen</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>trns_buisleidingen (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=trns_buisleidingen&amp;style=default:trns_buisleidingen" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+				</Layer>
+			</Layer>
+			<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+				<Name>ongevallen verkeer en vervoer</Name>
+				<Title>Ongevallen verkeer en vervoer</Title>
+				<SRS>EPSG:28992</SRS>
+				<SRS>EPSG:25832</SRS>
+				<SRS>EPSG:31466</SRS>
+				<SRS>EPSG:31467</SRS>
+				<SRS>EPSG:4326</SRS>
+				<SRS>EPSG:900913</SRS>
+				<SRS>EPSG:3857</SRS>
+				<SRS>EPSG:3035</SRS>
+				<SRS> EPSG:3034</SRS>
+				<SRS>EPSG:4936</SRS>
+				<SRS>EPSG:4258</SRS>
+				<SRS>EPSG:4937</SRS>
+				<SRS>EPSG:3043</SRS>
+				<SRS>EPSG:3044</SRS>
+				<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+				<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+				<ScaleHint max="1.0E8" min="0.0"/>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>luchtvaart ongeval</Name>
+					<Title>Luchtvaart ongeval</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>vliegveldvlak</Name>
+						<Title>Vliegveld</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>vliegveldvlak (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=vliegveldvlak&amp;style=default:vliegveldvlak" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>ongeval op water</Name>
+					<Title>Ongeval op water</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>ongevalwaterpunt</Name>
+						<Title>Water punt (Zee)haven</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>ongevalwaterpunt (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=ongevalwaterpunt&amp;style=default:ongevalwaterpunt" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>ongevalwaterlijn</Name>
+						<Title>Water lijn</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>ongevalwaterlijn (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=ongevalwaterlijn&amp;style=default:ongevalwaterlijn" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>ongevalwatervlak</Name>
+						<Title>Water vlak</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>ongevalwatervlak (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=ongevalwatervlak&amp;style=default:ongevalwatervlak" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>ongeval op land</Name>
+					<Title>Ongeval op land</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>verkeersongevallijn</Name>
+						<Title>Verkeersongeval</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>verkeersongevallijn (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=verkeersongevallijn&amp;style=default:verkeersongevallijn" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>ongeval  in tunnel</Name>
+					<Title>Ongeval in tunnel</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>tunnellijn</Name>
+						<Title>Tunnel</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>tunnellijn (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=tunnellijn&amp;style=default:tunnellijn" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+				</Layer>
+			</Layer>
+			<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+				<Name>Natuurrampen</Name>
+				<Title>Natuurrampen</Title>
+				<SRS>EPSG:28992</SRS>
+				<SRS>EPSG:25832</SRS>
+				<SRS>EPSG:31466</SRS>
+				<SRS>EPSG:31467</SRS>
+				<SRS>EPSG:4326</SRS>
+				<SRS>EPSG:900913</SRS>
+				<SRS>EPSG:3857</SRS>
+				<SRS>EPSG:3035</SRS>
+				<SRS> EPSG:3034</SRS>
+				<SRS>EPSG:4936</SRS>
+				<SRS>EPSG:4258</SRS>
+				<SRS>EPSG:4937</SRS>
+				<SRS>EPSG:3043</SRS>
+				<SRS>EPSG:3044</SRS>
+				<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+				<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+				<ScaleHint max="1.0E8" min="0.0"/>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>overstromingen Nederland</Name>
+					<Title>Overstromingen Nederland</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>overstromingsdiepten</Name>
+						<Title>Overstromingsdiepten</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>overstromingsdiepten (default)</Title>
+							<LegendURL height="50" width="50">
+								<Format>image/jpg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/legend/overstromingsdiepten.jpg" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="11.199999"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>waterrisicokaart_boolean</Name>
+						<Title>Overstromingsgebied</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>waterrisicokaart_boolean (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=waterrisicokaart_boolean&amp;style=default:waterrisicokaart_boolean" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="15.83919" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>buitendijksgebied</Name>
+						<Title>Buitendijksgebied</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>buitendijksgebied (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=buitendijksgebied&amp;style=default:buitendijksgebied" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>dijkringen</Name>
+						<Title>Dijkringen</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>dijkringen (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=dijkringen&amp;style=default:dijkringen" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>overstromingen onbedijkte rivier</Name>
+					<Title>Overstromingen onbedijkte rivier</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>overstromingen onbedijkte rivier overstromingsdiepten</Name>
+						<Title>Overstromingsdiepten</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<ScaleHint max="1.0E8" min="0.0"/>
+						<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+							<Name>overstromingsdiepten_onbedijkt_10</Name>
+							<Title>Kans 1 op 10 jr</Title>
+							<SRS>EPSG:28992</SRS>
+							<SRS>EPSG:25832</SRS>
+							<SRS>EPSG:31466</SRS>
+							<SRS>EPSG:31467</SRS>
+							<SRS>EPSG:4326</SRS>
+							<SRS>EPSG:900913</SRS>
+							<SRS>EPSG:3857</SRS>
+							<SRS>EPSG:3035</SRS>
+							<SRS> EPSG:3034</SRS>
+							<SRS>EPSG:4936</SRS>
+							<SRS>EPSG:4258</SRS>
+							<SRS>EPSG:4937</SRS>
+							<SRS>EPSG:3043</SRS>
+							<SRS>EPSG:3044</SRS>
+							<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+							<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+							<Style>
+								<Name>default</Name>
+								<Title>overstromingsdiepten_onbedijkt_10 (default)</Title>
+								<LegendURL height="10" width="10">
+									<Format>image/jpeg</Format>
+									<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=overstromingsdiepten_onbedijkt_10&amp;style=default:overstromingsdiepten_onbedijkt_10" xlink:type="simple"/>
+								</LegendURL>
+							</Style>
+							<ScaleHint max="1979.89895" min="11.199999"/>
+						</Layer>
+						<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+							<Name>overstromingsdiepten_onbedijkt_50</Name>
+							<Title>Kans 1 op 50 jr</Title>
+							<SRS>EPSG:28992</SRS>
+							<SRS>EPSG:25832</SRS>
+							<SRS>EPSG:31466</SRS>
+							<SRS>EPSG:31467</SRS>
+							<SRS>EPSG:4326</SRS>
+							<SRS>EPSG:900913</SRS>
+							<SRS>EPSG:3857</SRS>
+							<SRS>EPSG:3035</SRS>
+							<SRS> EPSG:3034</SRS>
+							<SRS>EPSG:4936</SRS>
+							<SRS>EPSG:4258</SRS>
+							<SRS>EPSG:4937</SRS>
+							<SRS>EPSG:3043</SRS>
+							<SRS>EPSG:3044</SRS>
+							<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+							<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+							<Style>
+								<Name>default</Name>
+								<Title>overstromingsdiepten_onbedijkt_50 (default)</Title>
+								<LegendURL height="10" width="10">
+									<Format>image/jpeg</Format>
+									<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=overstromingsdiepten_onbedijkt_50&amp;style=default:overstromingsdiepten_onbedijkt_50" xlink:type="simple"/>
+								</LegendURL>
+							</Style>
+							<ScaleHint max="1979.89895" min="11.199999"/>
+						</Layer>
+						<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+							<Name>overstromingsdiepten_onbedijkt_250</Name>
+							<Title>Kans 1 op 250 jr</Title>
+							<SRS>EPSG:28992</SRS>
+							<SRS>EPSG:25832</SRS>
+							<SRS>EPSG:31466</SRS>
+							<SRS>EPSG:31467</SRS>
+							<SRS>EPSG:4326</SRS>
+							<SRS>EPSG:900913</SRS>
+							<SRS>EPSG:3857</SRS>
+							<SRS>EPSG:3035</SRS>
+							<SRS> EPSG:3034</SRS>
+							<SRS>EPSG:4936</SRS>
+							<SRS>EPSG:4258</SRS>
+							<SRS>EPSG:4937</SRS>
+							<SRS>EPSG:3043</SRS>
+							<SRS>EPSG:3044</SRS>
+							<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+							<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+							<Style>
+								<Name>default</Name>
+								<Title>overstromingsdiepten_onbedijkt_250 (default)</Title>
+								<LegendURL height="10" width="10">
+									<Format>image/jpeg</Format>
+									<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=overstromingsdiepten_onbedijkt_250&amp;style=default:overstromingsdiepten_onbedijkt_250" xlink:type="simple"/>
+								</LegendURL>
+							</Style>
+							<ScaleHint max="1979.89895" min="11.199999"/>
+						</Layer>
+						<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+							<Name>overstromingsdiepten_onbedijkt_boolean</Name>
+							<Title>Overstromingsgebied kans 1:250</Title>
+							<SRS>EPSG:28992</SRS>
+							<SRS>EPSG:25832</SRS>
+							<SRS>EPSG:31466</SRS>
+							<SRS>EPSG:31467</SRS>
+							<SRS>EPSG:4326</SRS>
+							<SRS>EPSG:900913</SRS>
+							<SRS>EPSG:3857</SRS>
+							<SRS>EPSG:3035</SRS>
+							<SRS> EPSG:3034</SRS>
+							<SRS>EPSG:4936</SRS>
+							<SRS>EPSG:4258</SRS>
+							<SRS>EPSG:4937</SRS>
+							<SRS>EPSG:3043</SRS>
+							<SRS>EPSG:3044</SRS>
+							<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+							<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+							<Style>
+								<Name>default</Name>
+								<Title>overstromingsdiepten_onbedijkt_boolean (default)</Title>
+								<LegendURL height="10" width="10">
+									<Format>image/jpeg</Format>
+									<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=overstromingsdiepten_onbedijkt_boolean&amp;style=default:overstromingsdiepten_onbedijkt_boolean" xlink:type="simple"/>
+								</LegendURL>
+							</Style>
+							<ScaleHint max="15.83919" min="0.0"/>
+						</Layer>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>natuurbrand</Name>
+					<Title>Natuurbrand</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<ScaleHint max="1.0E8" min="0.0"/>
+					<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+						<Name>natuurbrandvlak</Name>
+						<Title>Brandbaar natuurgebied</Title>
+						<SRS>EPSG:28992</SRS>
+						<SRS>EPSG:25832</SRS>
+						<SRS>EPSG:31466</SRS>
+						<SRS>EPSG:31467</SRS>
+						<SRS>EPSG:4326</SRS>
+						<SRS>EPSG:900913</SRS>
+						<SRS>EPSG:3857</SRS>
+						<SRS>EPSG:3035</SRS>
+						<SRS> EPSG:3034</SRS>
+						<SRS>EPSG:4936</SRS>
+						<SRS>EPSG:4258</SRS>
+						<SRS>EPSG:4937</SRS>
+						<SRS>EPSG:3043</SRS>
+						<SRS>EPSG:3044</SRS>
+						<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+						<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+						<Style>
+							<Name>default</Name>
+							<Title>natuurbrandvlak (default)</Title>
+							<LegendURL height="10" width="10">
+								<Format>image/jpeg</Format>
+								<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=natuurbrandvlak&amp;style=default:natuurbrandvlak" xlink:type="simple"/>
+							</LegendURL>
+						</Style>
+						<ScaleHint max="1979.89895" min="0.0"/>
+					</Layer>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>aardbevingvlak</Name>
+					<Title>Geologische structuur aardbevingsvlak</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<Style>
+						<Name>default</Name>
+						<Title>aardbevingvlak (default)</Title>
+						<LegendURL height="10" width="10">
+							<Format>image/jpeg</Format>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=aardbevingvlak&amp;style=default:aardbevingvlak" xlink:type="simple"/>
+						</LegendURL>
+					</Style>
+					<ScaleHint max="1979.89895" min="0.0"/>
+				</Layer>
+			</Layer>
+			<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+				<Name>paniek verstoring</Name>
+				<Title>Paniek/verstoring</Title>
+				<SRS>EPSG:28992</SRS>
+				<SRS>EPSG:25832</SRS>
+				<SRS>EPSG:31466</SRS>
+				<SRS>EPSG:31467</SRS>
+				<SRS>EPSG:4326</SRS>
+				<SRS>EPSG:900913</SRS>
+				<SRS>EPSG:3857</SRS>
+				<SRS>EPSG:3035</SRS>
+				<SRS> EPSG:3034</SRS>
+				<SRS>EPSG:4936</SRS>
+				<SRS>EPSG:4258</SRS>
+				<SRS>EPSG:4937</SRS>
+				<SRS>EPSG:3043</SRS>
+				<SRS>EPSG:3044</SRS>
+				<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+				<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+				<ScaleHint max="1.0E8" min="0.0"/>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>evenementpunt</Name>
+					<Title>Evenement of activiteit punt</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<Style>
+						<Name>default</Name>
+						<Title>evenementpunt (default)</Title>
+						<LegendURL height="10" width="10">
+							<Format>image/jpeg</Format>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=evenementpunt&amp;style=default:evenementpunt" xlink:type="simple"/>
+						</LegendURL>
+					</Style>
+					<ScaleHint max="1979.89895" min="0.0"/>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>evenementlijn</Name>
+					<Title>Evenement of activiteit lijn</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<Style>
+						<Name>default</Name>
+						<Title>evenementlijn (default)</Title>
+						<LegendURL height="10" width="10">
+							<Format>image/jpeg</Format>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=evenementlijn&amp;style=default:evenementlijn" xlink:type="simple"/>
+						</LegendURL>
+					</Style>
+					<ScaleHint max="1979.89895" min="0.0"/>
+				</Layer>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>evenementvlak</Name>
+					<Title>Evenement of activiteit</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<Style>
+						<Name>default</Name>
+						<Title>evenementvlak (default)</Title>
+						<LegendURL height="10" width="10">
+							<Format>image/jpeg</Format>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=evenementvlak&amp;style=default:evenementvlak" xlink:type="simple"/>
+						</LegendURL>
+					</Style>
+					<ScaleHint max="1979.89895" min="0.0"/>
+				</Layer>
+			</Layer>
+			<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+				<Name>kwetsbare objecten</Name>
+				<Title>Kwetsbare objecten</Title>
+				<SRS>EPSG:28992</SRS>
+				<SRS>EPSG:25832</SRS>
+				<SRS>EPSG:31466</SRS>
+				<SRS>EPSG:31467</SRS>
+				<SRS>EPSG:4326</SRS>
+				<SRS>EPSG:900913</SRS>
+				<SRS>EPSG:3857</SRS>
+				<SRS>EPSG:3035</SRS>
+				<SRS> EPSG:3034</SRS>
+				<SRS>EPSG:4936</SRS>
+				<SRS>EPSG:4258</SRS>
+				<SRS>EPSG:4937</SRS>
+				<SRS>EPSG:3043</SRS>
+				<SRS>EPSG:3044</SRS>
+				<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+				<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+				<ScaleHint max="1.0E8" min="0.0"/>
+				<Layer cascaded="0" noSubsets="0" opaque="0" queryable="1">
+					<Name>kwetsbaarobject</Name>
+					<Title>Kwetsbare objecten</Title>
+					<SRS>EPSG:28992</SRS>
+					<SRS>EPSG:25832</SRS>
+					<SRS>EPSG:31466</SRS>
+					<SRS>EPSG:31467</SRS>
+					<SRS>EPSG:4326</SRS>
+					<SRS>EPSG:900913</SRS>
+					<SRS>EPSG:3857</SRS>
+					<SRS>EPSG:3035</SRS>
+					<SRS> EPSG:3034</SRS>
+					<SRS>EPSG:4936</SRS>
+					<SRS>EPSG:4258</SRS>
+					<SRS>EPSG:4937</SRS>
+					<SRS>EPSG:3043</SRS>
+					<SRS>EPSG:3044</SRS>
+					<LatLonBoundingBox maxx="7.4" maxy="53.6" minx="3.0" miny="50.0"/>
+					<BoundingBox SRS="EPSG:28992" maxx="300000.0" maxy="650000.0" minx="-25000.0" miny="300000.0" resx="-1.0" resy="-1.0"/>
+					<Style>
+						<Name>default</Name>
+						<Title>kwetsbaarobject (default)</Title>
+						<LegendURL height="10" width="10">
+							<Format>image/jpeg</Format>
+							<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?request=GetLegendGraphic&amp;version=1.1.1&amp;width=25&amp;height=25&amp;format=image/jpeg&amp;layer=kwetsbaarobject&amp;style=default:kwetsbaarobject" xlink:type="simple"/>
+						</LegendURL>
+					</Style>
+					<ScaleHint max="19.79582" min="0.0"/>
+				</Layer>
+			</Layer>
+		</Layer>
+	</Capability>
+</WMT_MS_Capabilities>

@@ -4,15 +4,115 @@
 	<Layerdescriptor>
 		<id>risicocontouren</id>
 		<name>risico contouren</name>
-		<layers>risico_inrichting_10-6,risico_installatie_10-6,trnsp_ctr_6</layers>
+		<layers>risico_inrichting_10-6,risico_installatie_10-6,trnsp_ctr_6,vliegveldcontour6</layers>
 		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
-		<styles>default,default,default</styles>
+		<styles>default,default,default,default</styles>
+		<attributes>NAAMINRICHTING,NAAM_INSTALLATIE,SOORT_INSTALLATIE,RISICOCONTOUR_AFSTAND</attributes>
+		<aliases>Naam,Installatie,Soort,risico afstand (m)</aliases>
+		<!--
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|_GUID_</metadata>
+		<moreinfo>_URL_</moreinfo>
+		-->
+		<zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>kernenergie</id>
+		<name>evacuatie afstand kernenergie</name>
+		<layers>veiligheidsafst_kernenergie</layers>
+		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
+		<styles>default</styles>
+		<attributes>NAAM_INRICHTING,NAAM_INSTALLATIE,ZONE_TYPE,RISICO_ZONE</attributes>
+		<aliases>Naam,installatie,zone type,risico afstand</aliases>
+		<!--
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|_GUID_</metadata>
+		<moreinfo>_URL_</moreinfo>
+		-->
+		<zoom>2</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>veiligheidsafstand</id>
+		<name>veiligheidsafstand vuurwerk</name>
+		<layers>veiligheidsafst_consument,veiligheidsafst_professioneel</layers>
+		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
+		<styles>default,default</styles>
 		<attributes>NAAMINRICHTING,NAAM_INSTALLATIE,SOORT_INSTALLATIE,RISICOCONTOUR_AFSTAND</attributes>
 		<aliases>Naam,Installatie,Soort,risico afstand</aliases>
 		<!--
-		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|87012b95-6e1a-4835-abbf-4f6271b56568</metadata>
-		<moreinfo>http://www.ipo.nl/publicaties/rapport-natuurmeting-op-kaart-beschikbaar</moreinfo>
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|_GUID_</metadata>
+		<moreinfo>_URL_</moreinfo>
+		-->
+		<!-- heeft merkwaardige scalehint van max="49.49747" min="0.0" dus effectief onbruikbaar -->
+		<zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>zone1vliegveld</id>
+		<name>vliegveld zone 1</name>
+		<layers>vliegveldcontour</layers>
+		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
+		<styles>default</styles>
+		<attributes>NAAMINRICHTING,NAAM_INSTALLATIE,SOORT_INSTALLATIE,RISICOCONTOUR_AFSTAND</attributes>
+		<aliases>Naam,Installatie,Soort,risico afstand</aliases>
+		<!--
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|_GUID_</metadata>
+		<moreinfo>_URL_</moreinfo>
+		-->
+		<!-- heeft merkwaardige scalehint van max="49.49747" min="0.0" dus effectief onbruikbaar -->
+		<zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>zonedefensie</id>
+		<name>defensie zones</name>
+		<layers>zone_defensie_a,zone_defensie_b,zone_defensie_c</layers>
+		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
+		<styles>default,default,default</styles>
+		<attributes>NAAMINRICHTING,NAAM_INSTALLATIE,TYPE_INSTALLATIE,TYPE_CONTOUR</attributes>
+		<aliases>Naam,Installatie,Soort,type contour</aliases>
+		<!--
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|_GUID_</metadata>
+		<moreinfo>_URL_</moreinfo>
 		-->
 		<zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>ongevallen_gevaarlijke_stoffen</id>
+		<name>gevaarlijke stoffen</name>
+		<layers>p_LPG,p_opslag,p_ammoniak,p_emplacement,p_vervoer,p_vuurwerk,p_nucleair,p_ontplofbarestoffen,p_defensie,p_overig,p_BRZO,terreingrens</layers>
+		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
+		<styles>default,default,default,default,default,default,default,default,default,default,default,default</styles>
+		<attributes>NAAM_INRICHTING,WM_VERGUNNING,BEVOEGD_GEZAG,STRAAT,HUISNUMMER,PLAATS</attributes>
+		<aliases>Naam,vergunning,bevoegd gezag,straat,huisnummer,plaats</aliases>
+		<!--
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|_GUID_</metadata>
+		<moreinfo>_URL_</moreinfo>
+		-->
+		<zoom>7</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>ongevallen_gevaarlijke_stoffen_transport</id>
+		<name>gevaarlijke stoffen transport</name>
+		<layers>trns_wegen,trns_spoorwegen,trns_waterwegen,trns_buisleidingen</layers>
+		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
+		<styles>default,default,default,default</styles>
+		<attributes>TRNSD_OMSCHRIJVING,MODALITEIT_OMSCHRIJVING,TRNS_NAAM,TRNS_OMSCHRIJVING</attributes>
+		<aliases>omschrijving,type,eigenaar,contact informatie</aliases>
+		<!--
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|_GUID_</metadata>
+		<moreinfo>_URL_</moreinfo>
+		-->
+		<zoom>2</zoom>
+	</Layerdescriptor>
+	<Layerdescriptor>
+		<id>ongevallen_verkeer_en_vervoer</id>
+		<name>verkeer en vervoer</name>
+		<layers>vliegveldvlak,ongevalwaterpunt,ongevalwaterlijn,ongevalwatervlak,verkeersongevallijn,tunnellijn</layers>
+		<url>http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services</url>
+		<styles>default,default,default,default,default,default</styles>
+		<attributes>TRNS_NAAM,TRNSD_OMSCHRIJVING,TRNS_OMSCHRIJVING,MODALITEIT_OMSCHRIJVING</attributes>
+		<aliases>Naam,(deel) omschrijving,omschrijving,type</aliases>
+		<!--
+		<metadata>http://www.nationaalgeoregister.nl/geonetwork/srv/dut/search#|_GUID_</metadata>
+		<moreinfo>_URL_</moreinfo>
+		-->
+		<zoom>2</zoom>
 	</Layerdescriptor>
 </Layers>
