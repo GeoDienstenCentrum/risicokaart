@@ -1,6 +1,7 @@
 risicokaart
 ===========
 
+
 risicokaart.nl maar dan toegankelijk en met oog voor privacy...
 
 [risicokaart.nl](http://risicokaart.nl) maakt gebruik van Google maps in plaats van de door de Rijksoverheid opgetuigde PDOK infrastuctuur, [Google is recentelijk op de vingers getikt](https://www.bof.nl/2013/11/28/google-beslissing-cbp-vaag-privacybeleid-niet-voldoende/) vanwege het niet naleven van de Nederlands wetgeving met betrekking tot bescherming van persoonsgegevens. Overigens zet risicokaart.nl ook tracking cookies in zonder daar toestemming voor te vragen.
@@ -11,3 +12,5 @@ Deze applicatie is gebouwd met [CBSviewer](https://github.com/MinELenI/CBSviewer
 Een live (beta) preview is tijdelijk beschikbaar op een [demonstratie server](http://gisdemo.agro.nl/risicokaart/) om te laten zien hoe het beter kan.
 
 ![logo](http://staff.washington.edu/tft/a11ylogo/images/a11ylogo150.png)
+
+[![Build Status](http://gisdemo.agro.nl/jenkins/buildStatus/icon?job=risicokaart)](http://gisdemo.agro.nl/jenkins/job/risicokaart/)
