@@ -14,4 +14,5 @@ Een live (beta) preview is tijdelijk beschikbaar op een [demonstratie server](ht
 ![logo](http://staff.washington.edu/tft/a11ylogo/images/a11ylogo150.png)
 
 [![Build Status](http://gisdemo.agro.nl/jenkins/buildStatus/icon?job=risicokaart)](http://gisdemo.agro.nl/jenkins/job/risicokaart/)
+[![Stories in Ready](https://badge.waffle.io/GeoDienstenCentrum/risicokaart.png?label=ready)](http://waffle.io/GeoDienstenCentrum/risicokaart)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/GeoDienstenCentrum/risicokaart/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
