@@ -1,10 +1,13 @@
 language: java
 before_install:
   - unset GEM_PATH
-script: mvn -e -Pjenkins,snapshotRepo verify
+install: 
+  - mvn -e -Pjenkins,snapshotRepo install -DskipTests=true -B
+script: 
+  - mvn -e -Pjenkins,snapshotRepo verify
 jdk:
   - openjdk7
   - oraclejdk8
 cache:
   directories:
-  - $HOME/.m2
+    - $HOME/.m2
