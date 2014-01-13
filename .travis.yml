@@ -1,0 +1,7 @@
+language: java
+before_install:
+  - unset GEM_PATH
+script: mvn -e -Pjenkins,snapshotRepo verify
+jdk:
+  - openjdk7
+  - oraclejdk8
