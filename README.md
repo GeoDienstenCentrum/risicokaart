@@ -15,3 +15,35 @@ Deze applicatie is gebouwd met [CBSviewer](https://github.com/MinELenI/CBSviewer
 
 [![Stories in Ready](https://badge.waffle.io/GeoDienstenCentrum/risicokaart.png?label=ready)](http://waffle.io/GeoDienstenCentrum/risicokaart)
 
+## bouwen en draaien
+
+Om de risicokaart webapp te draaien/bouwen moet je eerst even de [CBSviewer webapp](https://github.com/GeoDienstenCentrum/CBSviewer) bouwen omdat dit de basis is; er is een [uitgebreide handleiding]( https://mineleni.github.io/CBSviewer/ontwikkelhandleiding.html) beschikbaar. Daat staat ook de toolchain beschreven, in essentie git, phantomjs en Maven 3.
+
+De essentie is van het bouwproces is:
+```
+git clone https://github.com/MinELenI/CBSviewer.git CBSviewer
+cd CBSviewer
+mvn -Popenlayers,developer install
+```
+
+Mogelijk moet je in de web.xml nog de WMS service endpoint van de achtergrondkaart aanpassen (de pdok achtergrond wms is alleen voor selecte afnemers) er staat een voorbeeld in voor de WhereGroup WMS, maar je kunt ook openbasiskaart gebruiken (zoals te zien is in https://github.com/MinELenI/NOKviewer/blob/master/src/main/webapp/WEB-INF/web.xml)
+
+Vervolgens de code van de risicokaart webapp uitpakken en bouwen:
+
+```
+git clone https://github.com/GeoDienstenCentrum/risicokaart.git risicokaart
+cd risicokaart
+mvn install
+```
+
+Ook hier voor het bouwen mogelijk eerst de brtachtergrondkaar wms omhangen naar iets anders. de .war in de target directory kun je zo in een tomcat 7 droppen.
+
+met een commando als:
+
+`mvn -Dhttp.proxyHost=wpad.agro.nl -Dhttp.proxyPort=8080 -Pdeveloper -Ddebug=true jetty:run`
+
+wordt een lokale webserver gestart voor http://localhost:8020/
+
+_De app crashed momenteel op het onbreken van de url http://nederland.deegree.risicokaart.nl/ogc_wms_wfs/services?REQUEST=GetCapabilities&VERSION=1.3.0&SERVICE=WMS die moet ook aangepast in de web.xml_
+
+
